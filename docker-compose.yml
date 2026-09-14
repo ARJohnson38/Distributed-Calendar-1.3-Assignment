@@ -1,0 +1,137 @@
+services:
+  node0:
+    build: .
+    environment:
+      NODE_ID: "0"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8001:8000"
+    volumes:
+      - node0-data:/data
+    networks:
+      - calendar-net
+  node1:
+    build: .
+    environment:
+      NODE_ID: "1"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8002:8000"
+    volumes:
+      - node1-data:/data
+    networks:
+      - calendar-net
+  node2:
+    build: .
+    environment:
+      NODE_ID: "2"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8003:8000"
+    volumes:
+      - node2-data:/data
+    networks:
+      - calendar-net
+  node3:
+    build: .
+    environment:
+      NODE_ID: "3"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8004:8000"
+    volumes:
+      - node3-data:/data
+    networks:
+      - calendar-net
+  node4:
+    build: .
+    environment:
+      NODE_ID: "4"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8005:8000"
+    volumes:
+      - node4-data:/data
+    networks:
+      - calendar-net
+  node5:
+    build: .
+    environment:
+      NODE_ID: "5"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8006:8000"
+    volumes:
+      - node5-data:/data
+    networks:
+      - calendar-net
+  node6:
+    build: .
+    environment:
+      NODE_ID: "6"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8007:8000"
+    volumes:
+      - node6-data:/data
+    networks:
+      - calendar-net
+  node7:
+    build: .
+    environment:
+      NODE_ID: "7"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8008:8000"
+    volumes:
+      - node7-data:/data
+    networks:
+      - calendar-net
+  node8:
+    build: .
+    environment:
+      NODE_ID: "8"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8009:8000"
+    volumes:
+      - node8-data:/data
+    networks:
+      - calendar-net
+  node9:
+    build: .
+    environment:
+      NODE_ID: "9"
+      SIMULATION_DATE: "2030-10-01"
+      BASE_RANDOM_SEED: "47300"
+    ports:
+      - "8010:8000"
+    volumes:
+      - node9-data:/data
+    networks:
+      - calendar-net
+
+networks:
+  calendar-net:
+    driver: bridge
+
+volumes:
+  node0-data:
+  node1-data:
+  node2-data:
+  node3-data:
+  node4-data:
+  node5-data:
+  node6-data:
+  node7-data:
+  node8-data:
+  node9-data:
